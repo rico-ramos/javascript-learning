@@ -15,6 +15,11 @@ let isStudent = false; // boolean type
 let noData; // undefined type
 let firstName = null; // null type / object type (when printed)
 
+var userName2 = "John";
+let age2 = 24;
+let isStudent2= false;
+let noData2;
+let firstName2 = null
 
 // ---- Examples ----
 let lightMode = 'white';
@@ -59,9 +64,57 @@ let employee = new Object({
 console.log(employee.dept, employee.salary);
 
 // Arrays
-let names = ['John', 'David', 'William', 'Rina', 'Steven']; // array of strings
-
+// let names = ['John', 'David', 'William', 'Rina', 'Steven']; // array of strings
+let names2 = ['Joe', 'Tom', 'Jan', 'Jill', 'Sarah'];
 // ^zero-indexing
 
-console.log(names);
-console.log(names[2]);
+// console.log(names);
+// console.log(names[2]);
+console.log(names2[0] + ' has a friend named ' + names2[3]);
+console.log("\"Hi, " + names2[3] + ",\" said " + names2[0] +".")
+
+
+console.log("++++++++++++++++");
+console.log(userName2);
+console.log(age2);
+console.log(isStudent2);
+console.log(noData2);
+console.log(firstName2);
+console.log("++++++++++++++++");
+
+
+console.log("Let's pick a random name from our list: ");
+console.log("Ready?");
+console.log("I pick....");
+setTimeout(function(){
+    console.log(names2[Math.floor(Math.random() * 5)]);
+    setTimeout(function(){
+        console.log("Which name do you pick? Joe, Tom, Jan, Jill, or Sarah")
+    }, 1000);
+}, 3000);
+
+setTimeout(function(){
+    
+    let inputSuccess = false;
+    const inputChecker = {
+    requestInput: function(){
+        let userInput = prompt("Enter the name here:");
+        if (names2.includes(userInput)){
+        console.log(userInput + " is a great choice.");
+        inputSuccess = true;
+    } else {
+        alert(userInput + " was not one of the options!");
+        this.requestInput();
+    }
+}
+}
+inputChecker.requestInput();
+    if (names2.includes(userInput)){
+        console.log(userInput + " is a great choice.");
+        inputSuccess = true;
+    } else {
+        alert(userInput + " was not one of the options!")// console.log(userInput + " wasn't one of the options.");
+        inputChecker.requestInput();
+    }
+        
+}, 8000);
