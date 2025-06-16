@@ -1,6 +1,6 @@
 console.log("Hello, Javascript :D");
 console.info("Today is absolutely wonderful!");
-console.debug('your first js code') //visible during debugging section
+console.debug('your first JS debug code') //visible during debugging section
 console.error('This is an error statement'); //to generate error messaging
 console.warn("This is a warning statement"); //to generate warning
 

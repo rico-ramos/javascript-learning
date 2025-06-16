@@ -43,7 +43,7 @@ console.log(typeof firstName);
     // Array : Collection of similar or non-similar data
     // Function : Object Reference type
 
-
+console.log("--------------")
 let person = { 
     name:'David Voigt', 
     age: 30, 
@@ -54,6 +54,7 @@ let person = {
 //accessing the object
 
 console.log(person.gender);
+console.log("--------------")
 
 let employee = new Object({
     name:'John Snow',
@@ -91,7 +92,7 @@ setTimeout(function(){
     setTimeout(function(){
         console.log("Which name do you pick? Joe, Tom, Jan, Jill, or Sarah")
     }, 1000);
-}, 3000);
+}, 1000);
 
 setTimeout(function(){
     
@@ -109,12 +110,12 @@ setTimeout(function(){
 }
 }
 inputChecker.requestInput();
-    if (names2.includes(userInput)){
-        console.log(userInput + " is a great choice.");
-        inputSuccess = true;
-    } else {
-        alert(userInput + " was not one of the options!")// console.log(userInput + " wasn't one of the options.");
-        inputChecker.requestInput();
-    }
+    // if (names2.includes(userInput)){
+    //     console.log(userInput + " is a great choice.");
+    //     inputSuccess = true;
+    // } else {
+    //     alert(userInput + " was not one of the options!")// console.log(userInput + " wasn't one of the options.");
+    //     inputChecker.requestInput();
+    // }
         
-}, 8000);
+}, 4000);
