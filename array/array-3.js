@@ -18,15 +18,15 @@ burger.splice(2, 1, 'bacon'); // removes tomato and adds bacon
 burger.splice(3, 1, 'more bacon') // removes tomato and adds bacon
  burger.splice(4, 1,) // removes index 4 (lettuce)
 
-//Remove the bottom bun (first element)
-burger.shift(); 
+//Remove the bottom bun 
+burger.shift(); // removes first element)
 
 //remove top bun (last element)
-burger.pop();
+burger.pop(); // removes last
 
 //Add bottom bun
-burger.unshift('bottom bun')
-burger.push('top bun')
+burger.unshift('bottom bun') // adding element to beginning
+burger.push('top bun') // adds element to the end of array
 
 // Reverve burger order
 burger.reverse();

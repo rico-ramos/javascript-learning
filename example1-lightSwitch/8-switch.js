@@ -12,4 +12,4 @@ switchBtn.addEventListener("click", ()=>{
         switchBtn.innerText = "Turn off the light"
         
     }
-})
+});

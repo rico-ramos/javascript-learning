@@ -8,7 +8,10 @@ clothes.push("pants");
 clothes.push("underwear");
 clothes.push("socks");
 
-
+clothes.forEach(element => (clothes, index) {
+    console.log(`${clothes[index]}`)''
+    
+});
 
 
 clothes.reverse(); //reverse

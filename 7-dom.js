@@ -37,13 +37,38 @@ console.log(para2);
 let items = document.getElementsByTagName("li");
 for(let i = 0; i<items.length; i++) {
     items[i].style.color = "purple";
-}
+};
 
-// // 4 Query Selector - first match only
-// let firstItem = document.querySelector(".para-info");
-// console.log(firstItem);
+item[0].style.fontWeight='bold';
+item[1].style.fontStyle='italic';
+// console.log(item.length);
+for(let i = 0; i<item.length; i++){
+    item[i].style.fontSize='1em';
+    console.log(item[i].innerText, 'size updated.');
+    console.log(item.length, i);
+};
 
-// // 5 Query selector All - affects all matches
-// let firstItem = document.querySelectorAll(".para-info");
+
+// 4. Access by Query Selector : returns the first match
+let firstItem = document.querySelector(".item");
+console.log(firstItem);
+firstItem.style.backgroundColor="lightyellow";
+
+let firstItem1 = document.querySelector(".para-info");
+console.log(firstItem1);
+firstItem1.style.backgroundColor="lightyellow";
+firstItem1.style.padding = "10px";
+firstItem1.style.border = '1px solid orange';
+firstItem1.innerText += ' - Selected by Query Selector!';
+
+// 5. Access by Query Selector All : returns a collection of elements
+let allItems = document.querySelectorAll('li');
+allItems.forEach((item, index) => {
+    item.style.backgroundColor = 'lightblue';
+    item.style.margin = '5px';
+    item.style.padding = '10px';
+    item.innerText += ` item ${index + 1}`
+    item.innerText += ' - Selected by querySelector all'
+});
 
 
