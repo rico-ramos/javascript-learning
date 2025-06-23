@@ -1,6 +1,23 @@
+// Read/find the elements
 let taskInput = document.getElementById("task-input");
 let addTaskBtn = document.getElementById("add-task");
 let taskList = document.getElementById("task-list");
+
+
+// Store the original color when the page loads
+window.addEventListener('load', () => {
+    originalBtnColor = getComputedStyle(addTaskBtn).backgroundColor;
+    originalBtnTxtColor = getComputedStyle(addTaskBtn).color;
+});
+
+addTaskBtn.addEventListener('mouseover',()=>{
+    addTaskBtn.style.backgroundColor = "white";
+    addTaskBtn.style.color = "black";
+});
+addTaskBtn.addEventListener("mouseout", ()=> {
+    addTaskBtn.style.backgroundColor = originalBtnColor;
+    addTaskBtn.style.color = originalBtnTxtColor;
+})
 
 addTaskBtn.addEventListener("click", (event) => {
     let taskText = taskInput.value.trim();
@@ -9,7 +26,11 @@ addTaskBtn.addEventListener("click", (event) => {
 
     if (taskText === ""){
         alert("Please enter a task.");
+        // stop event propagation
+        event.stopPropagation();
+        event.preventDefault(); //prevents page refresh
         return;
+        
     }
 
     //create a new list item
@@ -40,22 +61,3 @@ addTaskBtn.addEventListener("click", (event) => {
     event.stopPropagation();
     event.preventDefault(); //prevents page refresh
 });
-
-
-
-// create new list item
-
-
-// Add a delete button to the list item
-// let deleteBtn = document.createElement("button")
-// deleteBtn.textContent="❌";
-// deleteBtn.className="delete-btn";
-// deleteBtn.style.marginLeft="10px";
-
-//
-// listItem.addp
-
-//
-
-
-
