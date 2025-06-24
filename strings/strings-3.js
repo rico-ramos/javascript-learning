@@ -26,7 +26,8 @@ let indexOfText = str.indexOf(searchText);
 console.log(`Index of "${searchText}":`, indexOfText);
 
 // Replace String
-// let newStr = 
+let newStr = str.replace("JS", "Javascript");
+console.log(newStr);
 
 // Split a string into an array
 let wordsArray = str.split(" ");
@@ -37,6 +38,11 @@ let joinedStr = wordsArray.join(" ");
 console.log(joinedStr);
 
 // Check if a string starts with a specifc substring
-
+let startsWithHello = str.startsWith("hello");
+console.log('Does the string start with Hello?', startsWithHello);
 
 // Checks if a string ends with a specific substring
+let endsWithMethods = str.endsWith("methods");
+let includesMethod = str.includes("method");
+console.log('Does the string end with methods?', endsWithMethods);
+console.log('Does the string include with method?', includesMethod);

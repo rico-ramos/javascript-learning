@@ -31,4 +31,13 @@ function isValidEmail(email) {
 console.log("is valid?", isValidEmail(email));
 console.log("is valid?", isValidEmail("user@domain"));
 
-// PHone number validator
+
+
+// Phone Number Validator
+let phoneNumber = "123-456-7890";
+
+// Validate phone number format: return true if valid, false otherwise
+// 10 digits phone number with optional dashes
+// should start with a digit and can contain dashes
+// should not contain any other characters
+// should not be empty
