@@ -50,12 +50,19 @@ let concatenatedArray = numbers2.concat(numbers3);
 
 console.log(concatenatedArray);
 
-//slicing
+
+// Slicing an array
+let slicedArray = concatenatedArray.slice(2, 5); // Extracting a portion
+console.log("Sliced Array: ", slicedArray); // Output: [ 3, 4, 5 ]
+
+// Splicing an array
+let splicedArray = concatenatedArray.splice(4,1,6); //
+console.log("Spliced Array: ", splicedArray); // Output:
 
 //mapping an array
     // doubling the array
 
 // Reducing an array
-let reducedArray = 
+// let reducedArray = 
 
 //Joining
