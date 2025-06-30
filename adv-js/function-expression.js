@@ -3,7 +3,7 @@
 
 // NOT hoisted: You can't call it before the line where it's defined
 
-showText(); // Leads to uncaught reference error.
+// showText(); // Leads to uncaught reference error.
 // 1. Labeled function expression
 let showText = function showMessage(){
     console.log("Today is a wonderful day.")

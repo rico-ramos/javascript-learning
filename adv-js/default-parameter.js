@@ -1,5 +1,6 @@
 // In Javascript you can assign default values to function params so that if no value is passed,
 // the default will be used. 
+// Best practice is to define the default parameters at the end of the parameter declaration
 
 function showMessage(name, message=", you are welcome."){
         console.log(name+message);
