@@ -1,22 +1,17 @@
 let newBankAccount = BankAccount 
 
-function BankAccount (accountName, balance){
+function BankAccount(accountName, balance){
     this.accountName = accountName;
     this.balance = balance;
 }
 
 // Shared method using prototype
 BankAccount.prototype.deposit = function(amount){
-    if(amount>this.balance){
-        console.log(`Insufficient funds for ${this.accountName}.`)
-        return false;
-    } else {
     this.balance = this.balance + amount; // same as --> this.balance += amount
     console.log(`${this.accountName} depostited $${amount}.`);
     console.log(`The updated balance is $${this.balance}.`);
     }
     
-}
 
 BankAccount.prototype.withdraw = function(amount){
     if(amount>this.balance){
@@ -40,3 +35,11 @@ const alex = new BankAccount("Alex", 20000);
 console.log(alex);
 alex.withdraw(10000);
 alex.withdraw(15000);
+
+console.log("--------------------");
+
+const sarah = new BankAccount("Sarah Jones", 200000);
+
+console.log(sarah);
+sarah.withdraw(100);
+sarah.deposit(10000);

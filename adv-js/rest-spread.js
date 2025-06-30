@@ -1,9 +1,12 @@
 //COMPLETE BELOW - spread operator
 // Rest ...args : Gathers remaining arguments into an array.
 // Used in function parameters
+// Rest parameter in banking function
+
 function totalDeposits(...amounts){
-    // console.log(amounts);
-   return amounts.reduce((sum, amount)=> sum + amount, 0);
+    console.log(amounts);
+    return amounts.reduce((sum, amount)=> sum + amount, 0);
+
 }
 
 console.log(

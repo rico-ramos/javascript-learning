@@ -1,7 +1,7 @@
 // Arrow Functions
 // for writing shorter syntax in JS
 let showText =  ()=>{
-    console.log("Today is a wonderful day.")
+    console.log("Today is a super, duper, wonderful day.")
 }
 
 
@@ -14,8 +14,6 @@ let showData1 = (greeting) => {
     console.log(`Today is a ${greeting} day.`)
 }
 
-
-//showMessage(); // Error: showMessage is not defined
 //call 
 showText();
 showData("Thursday");
@@ -31,8 +29,10 @@ let add = (num1, num2) => num1 + num2;
 
 let result = add(1000, 3000);
 
+// console.log(add(1000, 2000));
 console.log(result);
 
 
-const calculateInterest = (principal, rate, time) => (principal*rate*time)/100;
-console.log(calculateInterest(10000, 5, 1));
+const calculateInterest = (principal, interest, time) => (principal*interest*time)/100;
+console.log(calculateInterest(1000, 5, 1));
+

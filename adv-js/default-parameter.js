@@ -1,12 +1,12 @@
-// In you can assign default values to function params so that if no value is passed,
-// the default will be used.
+// In Javascript you can assign default values to function params so that if no value is passed,
+// the default will be used. 
 
-function showMessage(message="Hello"){
-        console.log(message);
+function showMessage(name, message=", you are welcome."){
+        console.log(name+message);
 }
 
-showMessage(); // Hello
-showMessage('Hello Customer!'); 
+showMessage("John"); // Hello
+showMessage('Hello Customer!'); // Hello Customer
 
 // Create bank account
 function createAccount(name, balance, type="Saving"){

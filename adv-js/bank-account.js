@@ -1,37 +1,41 @@
-// Simply banking ap using fuctnion expression
+// Simply banking ap using function expression
 //bank account object
 
 const bankAccount = {
-    accountHolder: "john doe",
+    accountHolder: "John Doe",
     balance: 10000
-}
+};
 
+//Deposit
 const deposit = function(amount){
     if (amount <= 0){
-        console.log('invalid deposit amount.')
+        console.log('Invalid deposit amount.')
         return;
     }
     bankAccount.balance += amount
     console.log(`${bankAccount.accountHolder} depostited $${amount}.`);
-    console.log(`The updated balance is $${this.balance}.`);
+    console.log(`The updated balance is $${bankAccount.balance}.`);
 }
 
-// withdraw
+// Withdraw
 const withdraw = function(amount){
     if(amount>bankAccount.balance){
-        console.log(`Insufficient funds for ${this.accountName}.`)
+        console.log(`Insufficient funds for ${bankAccount.accountHolder}.`)
         return false;
     } else {
-    this.balance = this.balance - amount; // same as --> this.balance -= amount
-    console.log(`${this.accountName} withdrew $${amount}.`);
-    console.log(`The updated balance is $${this.balance}.`);
+    bankAccount.balance = bankAccount.balance - amount; // same as --> this.balance -= amount
+    console.log(`${bankAccount.accountHolder} withdrew $${amount}.`);
+    console.log(`The updated balance is $${bankAccount.balance}.`);
     }
     
 }
 
 //check balance
 const checkBalance = function(){
-    
+    console.log(`Current balance: $${bankAccount.balance}.`)
 }
 
+checkBalance(); 
+deposit(10000);
+withdraw(80000);
 checkBalance(); 

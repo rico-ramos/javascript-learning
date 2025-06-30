@@ -1,9 +1,9 @@
 // Function Expression - syntax to declare functions
 // Call on VARIABLE vs. function name
 
-// NOT hoisted: You can't cal it before the line where it's defined
+// NOT hoisted: You can't call it before the line where it's defined
 
-// showText();
+showText(); // Leads to uncaught reference error.
 // 1. Labeled function expression
 let showText = function showMessage(){
     console.log("Today is a wonderful day.")
@@ -22,6 +22,6 @@ let showData1 = function (greeting){
 
 //showMessage(); // Error: showMessage is not defined
 //call 
-showText();
+showText(); //
 showData("Thursday");
 showData1('super');

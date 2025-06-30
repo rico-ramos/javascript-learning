@@ -1,4 +1,5 @@
-//COMPLETE BELOW // A Mapp is a built-in obj
+//COMPLETE BELOW 
+// // A Mapp is a built-in object that stores key-value pairs
 
 const account = new Map();
 
@@ -24,6 +25,6 @@ console.log(accountMap.get('ACC001'));
 // Loop through all the account
 for(const)
 
-// CHeck Account exits
+// Check Account exits
 
 //

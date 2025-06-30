@@ -10,6 +10,9 @@ function showMessage(){
     console.log("Today is a wonderful day.")
 }
 
+
+// function showMessage2(){};
+
 function showData(day){
     console.log(`${day} is a wonderful day.`)
 }

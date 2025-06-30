@@ -1,19 +1,19 @@
-// Runs immediately after defining - no need to call function
+// IIFE Runs immediately after it is defined - no need to call function
 // syntax :
 (function(){
     //logic
 })();
 
-// initialize data, run setup code, create 
+// Used initialize data, run setup code, create private scope
 
 (function(){
     //code initialization
-    // console.log('Bank system initialized at : ' + '')
+    console.log('Bank system initialized at : ' + new Date().toLocaleString())
 })();
 
 
-//private Interest Rate Calc
-const interest = (fuction(){
+//private Interest Rate Calculation
+const interest = (function(){
     const rate = 5; //private value
     return function(principal, years){
         return (principal * rate * years) / 100;
@@ -25,10 +25,12 @@ const interest = (fuction(){
 console.log(interest(10000, 2));
 
 
-// Geenrate unique account ID (sefl-contained)
-const accountID = (function(){
-    const prefix = "BANK"; //private
+// Generate unique account ID (sefl-contained)
+const accountId = (function(){
+    const prefix = "BANK"; //private value
     const randomNo = Math.floor(Math.random() * 100000);
-    return  prefix + randomNo
-    
+    return  prefix + randomNo;
+
 })();
+
+console.log("Generated Account ID: ", accountId)
